@@ -1,10 +1,12 @@
 import './PostDetailPage.css';
 import { useParams } from "react-router-dom";
 import {useState} from "react";
+import posts from '../../constants/data.json';
 
 function PostDetailPage() {
     const { postId } = useParams();
     const [postInfo, setPostInfo] = useState({});
+    console.log(posts);
 
     async function fetchPostInfo() {
         try {
