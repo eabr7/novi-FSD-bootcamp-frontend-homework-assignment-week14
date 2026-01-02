@@ -19,7 +19,6 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    border: solid yellow;
     margin: 1rem;
 }
 
@@ -29,12 +28,16 @@ ul {
     justify-content: space-between;
     align-items: flex-end;
     gap: 4rem;
-    border: solid red;
     margin: 1rem;
 }
 
 li {
     list-style:  none;
+}
+
+.nav-logo {
+    width: 5rem;
+    height: 5rem;
 }
 
 .active-menu-link {

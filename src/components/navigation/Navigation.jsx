@@ -1,5 +1,6 @@
 import './Navigation.css'
 import {NavLink} from 'react-router-dom';
+import logoNav from '../../assets/logo-medium.png';
 
 
 function Navigation() {
@@ -8,6 +9,9 @@ function Navigation() {
         <>
             <nav>
                 <ul>
+                    <li>
+                        <img src={logoNav} alt="Company logo" className="nav-logo"/>
+                    </li>
                     <li>
                         <NavLink
                             className={({isActive}) => isActive ? 'active-menu-link' : 'default-menu-link'}
