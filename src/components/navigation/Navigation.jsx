@@ -20,7 +20,7 @@ function Navigation() {
                     <li>
                         <NavLink
                             className={({isActive}) => isActive ? 'active-menu-link' : 'default-menu-link'}
-                            to="/overview">Alle blogposts</NavLink>
+                            to="/posts">Alle blogposts</NavLink>
                     </li>
                     <li>
                         <NavLink

@@ -20,7 +20,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/newpost" element={<NewPostPage/>}/>
-                <Route path="/overview" element={<OverviewPage/>}/>
+                <Route path="/posts" element={<OverviewPage/>}/>
                 <Route path="*" element={<Error404Page/>}/>
                 <Route path="/posts/:postId" element={<PostDetailPage/>} />
             </Routes>

@@ -39,7 +39,7 @@ function PostDetailPage() {
                 shares={postInfo.shares}
                 created={dateTimeChanger(postInfo.created)}
             />}
-           <Link to="/overview">Terug naar de overzichtspagina</Link>
+           <Link to="/posts">Terug naar de overzichtspagina</Link>
         </>
     );
 
