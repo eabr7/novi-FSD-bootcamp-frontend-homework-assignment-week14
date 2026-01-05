@@ -4,22 +4,44 @@ import InputForm from "../../components/form-components/inputForm/InputForm.jsx"
 import TextAreaForm from "../../components/form-components/textAreaForm/TextAreaForm.jsx";
 import PostButton from "../../components/buttons/postButton/PostButton.jsx";
 import {readTimeCalculator} from "../../helpers/readTimeCalculator.js";
+import { useNavigate } from 'react-router-dom';
+import {useEffect, useState} from "react";
 
 function NewPostPage() {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const [success, setSuccess] = useState(false);
+    const navigate = useNavigate();
 
     function handleFormSubmit(data) {
         const dateAndTime = new Date().toISOString();
         const newPost = {...data, comments: 0, shares: 0, created: dateAndTime, readTime: readTimeCalculator(data.content)}
         console.log(newPost);
+        setSuccess(true);
         reset();
+
     }
+
+    useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => {
+                navigate('/posts');
+            }, 2000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [success, navigate]);
 
     return (
 
         <>
             <h1>Blogpost toevoegen:</h1>
+
+            {success && (
+                <p className="success-message">
+                    Blogpost succesvol toegevoegd! Je wordt doorgestuurd…
+                </p>
+            )}
 
             <form className="post-form" onSubmit={handleSubmit(handleFormSubmit)}>
 
@@ -96,7 +118,6 @@ function NewPostPage() {
                     text="Versturen"
                 />
             </form>
-
         </>
     );
 
