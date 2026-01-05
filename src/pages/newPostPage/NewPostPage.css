@@ -15,3 +15,31 @@ Table of Contents:
 ////////////////////////////////////////////////////////////////////////*/
 
 
+.post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+.post-form > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.message-field {
+    border: solid thin orange;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.title-field .sub-title-field .author-field .message-field {
+    border: solid thin darkorange;
+}
