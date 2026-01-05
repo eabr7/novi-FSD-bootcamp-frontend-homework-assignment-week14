@@ -31,3 +31,7 @@ Table of Contents:
     align-items: center;
     padding: 10px;
 }
+
+.success-message {
+    color: orange;
+}

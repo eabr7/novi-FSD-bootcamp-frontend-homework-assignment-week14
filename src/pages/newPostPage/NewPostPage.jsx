@@ -19,7 +19,6 @@ function NewPostPage() {
         console.log(newPost);
         setSuccess(true);
         reset();
-
     }
 
     useEffect(() => {
@@ -120,8 +119,6 @@ function NewPostPage() {
             </form>
         </>
     );
-
-
 
 }
 
