@@ -26,7 +26,9 @@ function PostDetailPage() {
             <h1>PostDetailPage</h1>
             <button onClick={fetchPostInfo}>Haal blogpost hierop!</button>
             {postInfo && <>
-                <div>{postId}</div>
+                <div>
+
+                </div>
             </>}
         </>
 
