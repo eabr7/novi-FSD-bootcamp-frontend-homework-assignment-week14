@@ -9,7 +9,7 @@ function BlogPost({posts}) {
         <ul className="blogpost-component">
             {posts.map((post) => (
                 <li key={post.id}>
-                    <Link to={`/post/${post.id}`}>{post.title}</Link>
+                    <Link to={`/posts/${post.id}`}>{post.title}</Link>
                     <p>({post.author})</p>
                     <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
                 </li>

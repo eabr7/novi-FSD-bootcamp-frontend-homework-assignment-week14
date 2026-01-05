@@ -16,6 +16,7 @@ function OverviewPage() {
             try {
                 toggleLoadingAllPosts(true);
                 toggleErrorAllPosts(false);
+                // hier moet de GET-request om AllPosts op te halen
                 const response = posts.map((post) => {
                     return post;
                 })

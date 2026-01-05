@@ -1,9 +1,9 @@
 import './App.css'
 // import logo from './assets/logo-white.png'
 import Homepage from "./pages/homepage/Homepage.jsx";
-import NewPostPage from "./pages/NewPostPage/NewPostPage.jsx";
-import OverviewPage from "./pages/OverviewPage/OverviewPage.jsx";
-import Error404Page from "./pages/Error404Page/Error404Page.jsx";
+import NewPostPage from "./pages/newPostPage/NewPostPage.jsx";
+import OverviewPage from "./pages/overviewPage/OverviewPage.jsx";
+import Error404Page from "./pages/error404Page/Error404Page.jsx";
 import { Routes, Route } from 'react-router-dom';
 import Navigation from "./components/navigation/Navigation.jsx";
 import Footer from "./components/footer/Footer.jsx";
