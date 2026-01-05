@@ -31,15 +31,3 @@ Table of Contents:
     align-items: center;
     padding: 10px;
 }
-
-.message-field {
-    border: solid thin orange;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-
-
-.title-field .sub-title-field .author-field .message-field {
-    border: solid thin darkorange;
-}

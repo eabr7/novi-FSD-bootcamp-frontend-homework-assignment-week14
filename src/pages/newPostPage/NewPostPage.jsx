@@ -3,13 +3,17 @@ import { useForm } from 'react-hook-form';
 import InputForm from "../../components/form-components/inputForm/InputForm.jsx";
 import TextAreaForm from "../../components/form-components/textAreaForm/TextAreaForm.jsx";
 import PostButton from "../../components/buttons/postButton/PostButton.jsx";
+import {readTimeCalculator} from "../../helpers/readTimeCalculator.js";
 
 function NewPostPage() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     function handleFormSubmit(data) {
-        console.log(data);
+        const dateAndTime = new Date().toISOString();
+        const newPost = {...data, comments: 0, shares: 0, created: dateAndTime, readTime: readTimeCalculator(data.content)}
+        console.log(newPost);
+        reset();
     }
 
     return (
@@ -23,7 +27,7 @@ function NewPostPage() {
                 inputType="text"
                 inputName="title"
                 inputId="title-field"
-                inputLabel="Titel "
+                inputLabel="Titel"
                 className="title-field"
                 register={register}
                 errors={errors}
@@ -37,10 +41,10 @@ function NewPostPage() {
 
                 <InputForm
                     inputType="text"
-                    inputName="sub-title"
-                    inputId="sub-title-field"
-                    inputLabel="Ondertitel "
-                    className="sub-title-field"
+                    inputName="subTitle"
+                    inputId="subTitle-field"
+                    inputLabel="Ondertitel"
+                    className="subTitle-field"
                     register={register}
                     errors={errors}
                     validationRules={{
@@ -55,7 +59,7 @@ function NewPostPage() {
                     inputType="text"
                     inputName="author"
                     inputId="author-field"
-                    inputLabel="Auteur "
+                    inputLabel="Auteur"
                     className="author-field"
                     register={register}
                     errors={errors}
@@ -68,13 +72,13 @@ function NewPostPage() {
                 />
 
                 <TextAreaForm
-                ClassName="message-field"
-                textAreaLabel="Bericht "
-                textAreaId="message"
+                className="content-field"
+                textAreaLabel="Bericht"
+                textAreaId="content"
                 rows={10}
                 cols={100}
                 placeholder="Schrijf hier je bericht... "
-                textAreaName="message"
+                textAreaName="content"
                 register={register}
                 errors={errors}
                 validationRules={{
@@ -83,7 +87,7 @@ function NewPostPage() {
                         value: 300, message: 'Bericht moet minimaal 300 tekens bevatten'
                     }
                     , maxLength: {
-                        value: 2000, message: 'Blogpost bericht mag maximaal 2000 tekens bevatten'
+                        value: 2000, message: 'Bericht mag maximaal 2000 tekens bevatten'
                     }
                 }}
                 />
