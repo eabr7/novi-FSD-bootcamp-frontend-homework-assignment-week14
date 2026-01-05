@@ -1,8 +1,9 @@
 import './PostDetailPage.css';
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import posts from '../../constants/data.json';
 import BlogPostDetail from "../../components/blogPostDetail/BlogPostDetail.jsx";
+import {dateTimeChanger} from "../../helpers/dateTimeChanger.js";
 
 function PostDetailPage() {
     const { postId } = useParams();
@@ -34,11 +35,12 @@ function PostDetailPage() {
                 author={postInfo.author}
                 subtitle={postInfo.subtitle}
                 content={postInfo.content}
-                read={postInfo.readTime}
+                readTime={postInfo.readTime}
                 comments={postInfo.comments}
-                shared={postInfo.shares}
-                created={postInfo.created}
+                shares={postInfo.shares}
+                created={dateTimeChanger(postInfo.created)}
             />}
+           <Link to="/overview">Terug naar de overzichtspagina</Link>
         </>
     );
 
