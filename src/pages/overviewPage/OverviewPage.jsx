@@ -46,7 +46,7 @@ function OverviewPage() {
 
     return (
         <>
-            <h1>OverviewPage</h1>
+            <h1>Bekijk alle {allPosts.length} blogposts op het platform</h1>
 
             <BlogPost
                 posts={allPosts}

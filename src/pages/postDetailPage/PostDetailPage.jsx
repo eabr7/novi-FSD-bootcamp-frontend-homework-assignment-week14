@@ -29,7 +29,6 @@ function PostDetailPage() {
 
     return (
         <>
-            <h1>PostDetailPage</h1>
             {postInfo && postInfo.id && <BlogPostDetail
                 title={postInfo.title}
                 author={postInfo.author}

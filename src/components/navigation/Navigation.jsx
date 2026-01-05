@@ -20,12 +20,12 @@ function Navigation() {
                     <li>
                         <NavLink
                             className={({isActive}) => isActive ? 'active-menu-link' : 'default-menu-link'}
-                            to="/overview">All posts</NavLink>
+                            to="/overview">Alle blogposts</NavLink>
                     </li>
                     <li>
                         <NavLink
                             className={({isActive}) => isActive ? 'active-menu-link' : 'default-menu-link'}
-                            to="/newpost">New post</NavLink>
+                            to="/newpost">Nieuwe blogpost aanmaken</NavLink>
                     </li>
                 </ul>
             </nav>

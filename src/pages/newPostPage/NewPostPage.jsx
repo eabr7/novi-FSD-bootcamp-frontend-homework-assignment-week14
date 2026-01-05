@@ -6,7 +6,7 @@ function NewPostPage() {
 
         <>
 
-            <h1>NewPostPage</h1>
+            <h1>Blogpost toevoegen:</h1>
 
 
         </>

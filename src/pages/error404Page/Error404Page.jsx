@@ -8,7 +8,7 @@ function Error404Page() {
 
         <>
 
-            <h1>Error404Page</h1>
+            <h1>Error404 - pagina</h1>
 
         </>
 

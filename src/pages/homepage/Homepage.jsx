@@ -1,4 +1,5 @@
 import './Homepage.css';
+import bedrijfslogo from "../../assets/logo-white.png";
 
 
 function Homepage() {
@@ -8,7 +9,9 @@ function Homepage() {
 
         <>
 
-            <h1>Homepage</h1>
+            <h1>Welkom bij BIOgventure!</h1>
+
+            <img src={bedrijfslogo} alt="Logo van het bedrijf."/>
 
         </>
 
