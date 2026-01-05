@@ -21,5 +21,23 @@ Table of Contents:
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-evenly;
+    color: white;
+    margin: 1rem;
+}
 
+.blogpost-component > li {
+    border: solid thin darkorange;
+    padding: 0 5px 0 5px;
+    border-radius: 1rem;
+
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+a:active {
+    color: orange;
 }

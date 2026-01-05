@@ -1,4 +1,5 @@
 import './BlogPost.css';
+import {Link} from "react-router-dom";
 
 
 function BlogPost({posts}) {
@@ -8,7 +9,8 @@ function BlogPost({posts}) {
         <ul className="blogpost-component">
             {posts.map((post) => (
                 <li key={post.id}>
-                    <p>{post.title} ({post.author})</p>
+                    <Link to={`/post/${post.id}`}>{post.title}</Link>
+                    <p>({post.author})</p>
                     <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
                 </li>
             ))}

@@ -28,3 +28,7 @@ img {
     border: transparent;
     border-radius: 15px;
 }
+
+.error-message {
+    color: red;
+}

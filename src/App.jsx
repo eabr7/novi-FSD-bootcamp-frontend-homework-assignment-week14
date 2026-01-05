@@ -22,7 +22,7 @@ function App() {
                 <Route path="/newpost" element={<NewPostPage/>}/>
                 <Route path="/overview" element={<OverviewPage/>}/>
                 <Route path="*" element={<Error404Page/>}/>
-                <Route path="/overview/:postId" element={<PostDetailPage/>} />
+                <Route path="/posts/:postId" element={<PostDetailPage/>} />
             </Routes>
         </div>
     <Footer />
