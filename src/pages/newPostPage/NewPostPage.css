@@ -1,0 +1,37 @@
+/*////////////////////////////////////////////////////////////////////////  
+Table of Contents:  
+	1. Global Styles
+    2. Typografy   
+    3. Layout    
+	    - Reusables
+	    - Other
+    4. Areas        
+		- 4.1 Header        
+	    - 4.2 Testimonial        
+	    - 4.3 Support        
+	    - 4.4 Faq        
+	    - 4.5 Footer    
+	    5. Queries
+////////////////////////////////////////////////////////////////////////*/
+
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+.post-form > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.success-message {
+    color: orange;
+}

@@ -1,0 +1,23 @@
+/*////////////////////////////////////////////////////////////////////////  
+Table of Contents:  
+	1. Global Styles
+    2. Typografy   
+    3. Layout    
+	    - Reusables
+	    - Other
+    4. Areas        
+		- 4.1 Header        
+	    - 4.2 Testimonial        
+	    - 4.3 Support        
+	    - 4.4 Faq        
+	    - 4.5 Footer    
+	    5. Queries
+////////////////////////////////////////////////////////////////////////*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #38E991;
+}
